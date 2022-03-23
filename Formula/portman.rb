@@ -13,7 +13,6 @@ class Portman < Formula
   end
 
   test do
-    system "#{bin}/portman", "allocate", "foo"
-    system "#{bin}/portman", "get", "bar"
+    system "#{bin}/portman", "--version"
   end
 end
