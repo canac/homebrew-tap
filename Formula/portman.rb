@@ -1,5 +1,5 @@
 class Portman < Formula
-  desc "Local port manager"
+  desc "Local port allocation manager"
   homepage "https://github.com/canac/portman"
   url "https://github.com/canac/portman/archive/v0.2.1.tar.gz"
   sha256 "c2ed5d685a140027c117783997c35b3f407f923efc008d9ba795b38f2ec28136"
@@ -16,6 +16,11 @@ class Portman < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    man1.install Dir["man/man1/*.1"]
+    bash_completion.install "contrib/completions/portman.bash" => "portman"
+    zsh_completion.install "contrib/completions/_portman"
+    fish_completion.install "contrib/completions/portman.fish"
   end
 
   test do
