@@ -1,8 +1,8 @@
 class Mailbox < Formula
   desc "Message manager for local commands"
   homepage "https://github.com/canac/mailbox"
-  url "https://github.com/canac/mailbox/archive/v0.1.2.tar.gz"
-  sha256 "329b6c29fde266fa87442959b23dd2e69706a91cb43a4beb9ad0951d82d99694"
+  url "https://github.com/canac/mailbox/archive/v0.1.3.tar.gz"
+  sha256 "0ec3e7f843952dacc416185fc734151126aba73129b6b9a7ec3e605af58c1ce1"
   license "MIT"
 
   depends_on "rust" => :build
