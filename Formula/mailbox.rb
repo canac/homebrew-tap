@@ -6,7 +6,6 @@ class Mailbox < Formula
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on "mailbox"
 
   def install
     system "cargo", "install", *std_cargo_args
