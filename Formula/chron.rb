@@ -1,8 +1,8 @@
 class Chron < Formula
   desc "Easily run scripts on a schedule"
   homepage "https://github.com/canac/chron"
-  url "https://github.com/canac/chron/archive/v0.1.1.tar.gz"
-  sha256 "2598cca4d407e047edf84a4fd47fbdbcb57321537e1ec4bb5227d542107adfd3"
+  url "https://github.com/canac/chron/archive/v0.1.2.tar.gz"
+  sha256 "b85a6a184cd98d809ca647ce99f8daa40024335eda3307a2a5abb91e6cb3b639"
   license "MIT"
 
   bottle do
