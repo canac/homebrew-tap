@@ -1,8 +1,8 @@
 class Mailbox < Formula
   desc "Message manager for local commands"
   homepage "https://github.com/canac/mailbox"
-  url "https://github.com/canac/mailbox/archive/v0.3.0.tar.gz"
-  sha256 "8755d76e259bde7672002d72c0050303942384191bcfc5b1df5ac6985cea6301"
+  url "https://github.com/canac/mailbox/archive/v0.3.1.tar.gz"
+  sha256 "c812c8601ce3464a1465c3b379467d2a73104f2c366e92b1a701e96d565f1dfd"
   license "MIT"
 
   bottle do
