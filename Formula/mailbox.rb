@@ -23,6 +23,6 @@ class Mailbox < Formula
   end
 
   test do
-    system "#{bin}/mailbox", "--version"
+    assert_match "bar [foo]", shell_output("#{bin}/mailbox add foo bar")
   end
 end
