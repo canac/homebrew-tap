@@ -6,9 +6,9 @@ class Mailbox < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/mailbox-0.3.1"
-    sha256 cellar: :any_skip_relocation, big_sur:      "02a3d4d56694d76d107e7bd7be0fc82c9b49d00968dc34cd83395d8b4c6c2347"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "af53bb7d39c35d49c06c1bed62ef4e9b1f5a3b28f2f45628c392724de2115f6b"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/mailbox-0.3.2"
+    sha256 cellar: :any_skip_relocation, big_sur:      "9983a9c1441341419b26866f28d708aa1bccae4465f063250c352f00db49f555"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fe24f29c02eca74a2c380aa7176745e34cc2638d7d32a0e2aba083c143b20448"
   end
 
   depends_on "rust" => :build
