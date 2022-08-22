@@ -16,6 +16,11 @@ class Chron < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    man1.install "man/man1/chron.1"
+    bash_completion.install "contrib/completions/chron.bash" => "chron"
+    zsh_completion.install "contrib/completions/_chron"
+    fish_completion.install "contrib/completions/chron.fish"
   end
 
   test do
