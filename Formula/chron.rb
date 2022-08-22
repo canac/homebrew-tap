@@ -1,8 +1,8 @@
 class Chron < Formula
   desc "Easily run scripts on a schedule"
   homepage "https://github.com/canac/chron"
-  url "https://github.com/canac/chron/archive/v0.1.2.tar.gz"
-  sha256 "b85a6a184cd98d809ca647ce99f8daa40024335eda3307a2a5abb91e6cb3b639"
+  url "https://github.com/canac/chron/archive/v0.2.2.tar.gz"
+  sha256 "3981a778e013dd2fe921c14ff84bc758068a0ede0aca09e986f89e2e10fe8cb7"
   license "MIT"
 
   bottle do
@@ -12,13 +12,37 @@ class Chron < Formula
   end
 
   depends_on "rust" => :build
-  depends_on "mailbox"
+  depends_on "canac/tap/mailbox"
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    man1.install "man/man1/chron.1"
+    bash_completion.install "contrib/completions/chron.bash" => "chron"
+    zsh_completion.install "contrib/completions/_chron"
+    fish_completion.install "contrib/completions/chron.fish"
   end
 
   test do
-    system "test", "-f", "#{bin}/chron"
+    file1 = testpath/"file1.txt"
+    file2 = testpath/"file2.txt"
+
+    (testpath/"chronfile.toml").write <<~EOS
+      [startup.file1]
+      command = "touch '#{file1}'"
+      keepAlive = false
+
+      [scheduled.file2]
+      command = "touch '#{file2}'"
+      schedule = "* * * * * * *"
+    EOS
+
+    fork do
+      exec bin/"chron", testpath/"chronfile.toml"
+    end
+    sleep 2
+
+    assert_predicate file1, :exist?
+    assert_predicate file2, :exist?
   end
 end
