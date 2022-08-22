@@ -24,6 +24,25 @@ class Chron < Formula
   end
 
   test do
-    system "test", "-f", "#{bin}/chron"
+    file1 = testpath/"file1.txt"
+    file2 = testpath/"file2.txt"
+
+    (testpath/"chronfile.toml").write <<~EOS
+      [startup.file1]
+      command = "touch '#{file1}'"
+      keepAlive = false
+
+      [scheduled.file2]
+      command = "touch '#{file2}'"
+      schedule = "* * * * * * *"
+    EOS
+
+    fork do
+      exec bin/"chron", testpath/"chronfile.toml"
+    end
+    sleep 2
+
+    assert_predicate file1, :exist?
+    assert_predicate file2, :exist?
   end
 end
