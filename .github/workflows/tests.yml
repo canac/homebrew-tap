@@ -4,6 +4,10 @@ on:
     branches:
       - main
   pull_request:
+env:
+  # Needed to workaround `No available formula with the name "rust".` error
+  # https://github.com/Homebrew/brew/issues/15049
+  HOMEBREW_NO_INSTALL_FROM_API: 1
 jobs:
   test-bot:
     strategy:
