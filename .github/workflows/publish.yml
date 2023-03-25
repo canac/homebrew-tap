@@ -3,6 +3,10 @@ on:
   pull_request_target:
     types:
       - labeled
+env:
+  # Needed to workaround `No available formula with the name "rust".` error
+  # https://github.com/Homebrew/brew/issues/15049
+  HOMEBREW_NO_INSTALL_FROM_API: 1
 jobs:
   pr-pull:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
