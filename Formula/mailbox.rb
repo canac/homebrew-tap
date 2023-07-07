@@ -14,12 +14,12 @@ class Mailbox < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--locked", "--root", prefix, "--path", "cli"
 
-    man1.install Dir["man/man1/*.1"]
-    bash_completion.install "contrib/completions/mailbox.bash" => "mailbox"
-    zsh_completion.install "contrib/completions/_mailbox"
-    fish_completion.install "contrib/completions/mailbox.fish"
+    man1.install Dir["cli/man/man1/*.1"]
+    bash_completion.install "cli/contrib/completions/mailbox.bash" => "mailbox"
+    zsh_completion.install "cli/contrib/completions/_mailbox"
+    fish_completion.install "cli/contrib/completions/mailbox.fish"
   end
 
   test do
