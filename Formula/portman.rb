@@ -23,6 +23,16 @@ class Portman < Formula
     bash_completion.install "contrib/completions/portman.bash" => "portman"
     zsh_completion.install "contrib/completions/_portman"
     fish_completion.install "contrib/completions/portman.fish"
+
+    (share/"fish"/"vendor_conf.d"/"portman-init.fish").write <<~EOS
+      #{opt_bin}/portman init fish | source
+    EOS
+  end
+
+  def caveats
+    <<~EOS
+      If you are using fish shell, portman will be initialized for you automatically.
+    EOS
   end
 
   test do
