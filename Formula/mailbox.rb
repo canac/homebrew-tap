@@ -24,6 +24,6 @@ class Mailbox < Formula
   end
 
   test do
-    assert_match "bar [foo]", shell_output("#{bin}/mailbox add foo bar")
+    assert_match "bar [foo]", shell_output("#{bin}/mailbox add foo bar --no-color")
   end
 end
