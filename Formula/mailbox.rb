@@ -15,6 +15,7 @@ class Mailbox < Formula
 
   def install
     system "cargo", "install", "--locked", "--root", prefix, "--path", "cli"
+    system "cargo", "install", "--locked", "--root", prefix, "--path", "server"
 
     man1.install Dir["cli/man/man1/*.1"]
     bash_completion.install "cli/contrib/completions/mailbox.bash" => "mailbox"
