@@ -6,9 +6,11 @@ class Chron < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/chron-0.3.0"
-    sha256 cellar: :any_skip_relocation, monterey:     "692b4da82dee8893fe341e6c335e7e2ae23cd884203eff4a0cad98e95f6a06b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "389a04077fcc78f6dd9f6603117b04f42d860e9576cede07f0d6f042a29b463d"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/chron-0.3.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "a3814823a78009d5a6bc7f5db28e56ad7fac026356563dae84b2ab112a0989e0"
+    sha256 cellar: :any_skip_relocation, ventura:      "82bf59fcc259ea7988e98ee81f26a999e949ee50dba68799cb2b99a369776a9b"
+    sha256 cellar: :any_skip_relocation, monterey:     "8372e3b9dacb61fe259c7cc242d07618e8979d46eb16154ca8aeab51fc02af86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "16ff042801c87201134e55db0adf88d1530a5c35a3405e54724df02644cf1ac8"
   end
 
   depends_on "rust" => :build
