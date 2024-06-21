@@ -19,10 +19,12 @@ class Mailbox < Formula
     system "cargo", "install", "--locked", "--root", prefix, "--path", "cli"
     system "cargo", "install", "--locked", "--root", prefix, "--path", "server"
 
-    man1.install Dir["cli/man/man1/*.1"]
-    bash_completion.install "cli/contrib/completions/mailbox.bash" => "mailbox"
-    zsh_completion.install "cli/contrib/completions/_mailbox"
-    fish_completion.install "cli/contrib/completions/mailbox.fish"
+    man1.install Dir["man/man1/*.1"]
+    Dir["contrib/completions/*.bash"].each do |path|
+      bash_completion.install path => File.basename(path, ".bash")
+    end
+    zsh_completion.install Dir["contrib/completions/_*"]
+    fish_completion.install Dir["contrib/completions/*.fish"]
   end
 
   test do
