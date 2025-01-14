@@ -16,8 +16,8 @@ class Mailbox < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "cli"
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "server"
+    system "cargo", "install", *std_cargo_args(path: "cli")
+    system "cargo", "install", *std_cargo_args(path: "server")
 
     man1.install Dir["man/man1/*.1"]
     Dir["contrib/completions/*.bash"].each do |path|
