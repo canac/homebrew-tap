@@ -6,11 +6,11 @@ class Mailbox < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/mailbox-0.8.4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "be0dafec3db7ee1f405d778744951f0adaff0507d61b3e6e498c2e039c43d67f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3012cd09964aebf791ef2f5d81672d52c8073f506beb70b7444c4a5bcb03d126"
-    sha256 cellar: :any_skip_relocation, ventura:       "bb750df0bc39729fff7c849225e90b1ec50ca5694dde9ec789daa46fd74f4ccb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a64b375d410b55ad74c07aefbef7329076f5ddae9eb655b26fc96de039448331"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/mailbox-0.8.5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b51e77e7f6f9b5675f67dd1ec5d8b2521214bf1f132f288cb703f97caebfbd48"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "27831dc2d58d897e43d29fb5487e08291a624cc6c88c7443776f80f2ffec5606"
+    sha256 cellar: :any_skip_relocation, ventura:       "e579d2dbe2f696361b01c577aa5cd0a0da47f9de1f612ef738991ddc47a7ea64"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fb60c7ae5d1396baa12b5d946cbd7232888a21d1aefd3bff70f184f6f97604f0"
   end
 
   depends_on "rust" => :build
