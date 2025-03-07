@@ -44,7 +44,7 @@ class Chron < Formula
     end
     sleep 2
 
-    assert_predicate file1, :exist?
-    assert_predicate file2, :exist?
+    assert_path_exists file1
+    assert_path_exists file2
   end
 end
