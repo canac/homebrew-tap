@@ -41,7 +41,7 @@ class Chron < Formula
     EOS
 
     fork do
-      exec bin/"chron", testpath/"chronfile.toml"
+      exec bin/"chron", "run", testpath/"chronfile.toml"
     end
     sleep 2
 
