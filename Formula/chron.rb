@@ -6,12 +6,11 @@ class Chron < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/chron-0.3.4"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "25abb7321052d8858e4de0d98152eb3b62e542174683c8915577ebdcc964649f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1fee34d2ae1f16049d3c79e0ec12490001594b59dee547582ef10f7a39881ac2"
-    sha256 cellar: :any_skip_relocation, ventura:       "9e29b301b651fe91522c222da277acf98349ff97a4f1369d310bfac27bb68b4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "67814ecd7231d9de8d863c71d673ce4261b9b8acd10d2f91b0c5a9111a6d5c5b"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/chron-0.4.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "50d066425ca77f1b940a47f8ab315573d87dcda9e8cbf897164f26c7107b877c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "168796ae527c24820ce7b35dd8e4da9b5bb3a06aa0c6250a4acf18b9f7a981ab"
+    sha256 cellar: :any_skip_relocation, ventura:       "cb8ae5acb2e8d7b440eba05f18237a7bbf38dd28256faef50ac91643a40c2f71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4626f9d95a14999f63e33b6c618171e0ee6a57475f5b4c13d1a56a8056c245c"
   end
 
   depends_on "rust" => :build
