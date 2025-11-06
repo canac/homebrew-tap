@@ -6,11 +6,10 @@ class Portman < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/portman-0.6.4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "147df39ec123e6d5b4986a17799714145b5cffd57a97997363bac199930570ac"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e13acc0693879417cf6aae623469ed2c8ab47608c8392b04b431e30481cabe4"
-    sha256 cellar: :any_skip_relocation, ventura:       "79713c680c69472fa79c56a446dd00f69561fd20ebd32304ebaef11402397642"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9ee08cad88fa8c9ee4176065dddc0317b028243f367547183ca86095275b706"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/portman-0.6.5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a6d9eb3523c27925ec5ed787dca0cf6481d79cab2a1fe4839597decf0e174a5c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fdc558a68d258182b24a48161f863139f147a5ea41ef8d171507dd40a648e474"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa71e8f2cee5cc9f9921771bb821714d7fc327483af29491d6566722e82a5c9d"
   end
 
   depends_on "rust" => :build
