@@ -29,11 +29,11 @@ class Chron < Formula
     file2 = testpath/"file2.txt"
 
     (testpath/"chronfile.toml").write <<~EOS
-      [startup.file1]
+      [jobs.file1]
       command = "touch '#{file1}'"
       keepAlive = false
 
-      [scheduled.file2]
+      [jobs.file2]
       command = "touch '#{file2}'"
       schedule = "* * * * * * *"
     EOS
