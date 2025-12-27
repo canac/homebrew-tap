@@ -31,7 +31,6 @@ class Chron < Formula
     (testpath/"chronfile.toml").write <<~EOS
       [jobs.file1]
       command = "touch '#{file1}'"
-      keepAlive = false
 
       [jobs.file2]
       command = "touch '#{file2}'"
