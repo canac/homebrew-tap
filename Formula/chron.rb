@@ -14,7 +14,6 @@ class Chron < Formula
   end
 
   depends_on "rust" => :build
-  depends_on "canac/tap/mailbox"
 
   def install
     system "cargo", "install", *std_cargo_args
