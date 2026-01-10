@@ -4,6 +4,7 @@ class Portman < Formula
   url "https://github.com/canac/portman/archive/refs/tags/v0.6.5.tar.gz"
   sha256 "72f940783b4c95fe9a5dedd08d6a57027f0854e22916d4e77f7b1b9bbbfc17ec"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/canac/homebrew-tap/releases/download/portman-0.6.5"
