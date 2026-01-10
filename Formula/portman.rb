@@ -7,10 +7,11 @@ class Portman < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/portman-0.6.5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a6d9eb3523c27925ec5ed787dca0cf6481d79cab2a1fe4839597decf0e174a5c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fdc558a68d258182b24a48161f863139f147a5ea41ef8d171507dd40a648e474"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa71e8f2cee5cc9f9921771bb821714d7fc327483af29491d6566722e82a5c9d"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/portman-0.6.5_1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4d8ea47c3cee05ad40b48c4eb6807fe7fa88ca22276f406a0ebf135257e872e7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "60b2571f2f31546e8ef79e21371588799e18982997cfb43a3e597a2ae654748f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "57637924ef52b1595deb9f1c668b3733e9d1df2b1b6810be630a636f97fac16f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58d8649dfa4db29a1d846624043fdecbf5dfe3d757c6f64afefdbc606f029fb1"
   end
 
   depends_on "rust" => :build
