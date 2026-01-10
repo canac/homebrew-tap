@@ -4,6 +4,7 @@ class Mailbox < Formula
   url "https://github.com/canac/mailbox/archive/refs/tags/v0.8.6.tar.gz"
   sha256 "4e40c495eb40ec0ea37bf12174aa3e39534e63e2d5768d901e3ab7e16f95ec00"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/canac/homebrew-tap/releases/download/mailbox-0.8.6"
