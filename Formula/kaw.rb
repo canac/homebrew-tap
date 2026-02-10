@@ -4,6 +4,7 @@ class Kaw < Formula
   url "https://github.com/canac/kaw/archive/refs/tags/v0.1.5.tar.gz"
   sha256 "e22f93f1bd87a59bbd588cf309e8174fbc33e473f3343f3e2c3f9bc0fabb61b6"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/canac/homebrew-tap/releases/download/kaw-0.1.5"

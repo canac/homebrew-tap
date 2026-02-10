@@ -4,6 +4,7 @@ class Chron < Formula
   url "https://github.com/canac/chron/archive/refs/tags/v0.5.1.tar.gz"
   sha256 "239c2b3954f3162a8add01f9bb12fdae9ebe9a2501de8c20e58a8d53283450f7"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/canac/homebrew-tap/releases/download/chron-0.5.1"
