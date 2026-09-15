@@ -1,8 +1,8 @@
 class Kaw < Formula
   desc "Transform stdin like awk but with expressions written in JavaScript"
   homepage "https://github.com/canac/kaw"
-  url "https://github.com/canac/kaw/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "63c47e31d8d7194342dc074e4cc1ff61b243378f4487aff4ed4dfad21df51843"
+  url "https://github.com/canac/kaw/archive/refs/tags/v0.1.7.tar.gz"
+  sha256 "7cc53b65875458bfb7bde6d078e089f7c67059ed41b274923f536287b7c9bbe0"
   license "MIT"
 
   bottle do
