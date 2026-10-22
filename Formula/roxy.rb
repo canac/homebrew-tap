@@ -15,6 +15,11 @@ class Roxy < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    bash_completion.install "contrib/completions/roxy.bash" => "roxy"
+    fish_completion.install "contrib/completions/roxy.fish"
+    zsh_completion.install "contrib/completions/_roxy"
+    man1.install Dir["man/man1/*.1"]
   end
 
   test do
