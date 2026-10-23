@@ -6,8 +6,8 @@ class Roxy < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/roxy-0.1.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "a0c6dcf877b3488e81676c3158bd62ca433ebdfb11874879c66af098940ea453"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/roxy-0.1.2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "aed32b2ea9b7d74d6530d470df827a49a013bcc00db3357d78a15fb23cf18cab"
   end
 
   depends_on "rust" => :build
