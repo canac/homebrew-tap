@@ -24,5 +24,21 @@ class Roxy < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/roxy --version")
+
+    (testpath/"hook.js").write <<~JS
+      export function onRequest() {
+        return new Response("hooked by roxy");
+      }
+    JS
+    port = free_port
+    pid = spawn({ "ROXY_PORT" => port.to_s }, bin/"roxy", "run", testpath/"hook.js")
+    begin
+      output = shell_output("curl -s --retry 10 --retry-connrefused --retry-delay 1 " \
+                            "-x http://127.0.0.1:#{port} http://roxy.test/")
+      assert_equal "hooked by roxy", output
+    ensure
+      Process.kill("TERM", pid)
+      Process.wait(pid)
+    end
   end
 end
