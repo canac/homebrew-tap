@@ -1,8 +1,8 @@
 class Roxy < Formula
   desc "Scriptable man-in-the-middle HTTP(S) proxy using JavaScript web-standard APIs"
   homepage "https://github.com/canac/roxy"
-  url "https://github.com/canac/roxy/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "9d1d6898d98c1ee94ac3708a8116a9956f9044f47a31f92f1e98490123d16c80"
+  url "https://github.com/canac/roxy/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "62e1fbbc352984935bfe97d42a22a0017348e4ed16c1ef7f805eeff337a37173"
   license "MIT"
 
   bottle do
