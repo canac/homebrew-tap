@@ -6,9 +6,9 @@ class Kaw < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/canac/homebrew-tap/releases/download/kaw-0.1.8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "697a1b5039ec7d179687b8840be1f3faf434b7c838c30be9d6170d73d365eb12"
-    sha256 cellar: :any,                 x86_64_linux: "46d87c34884c630b7de933bd62d858684122ccfa5ae5b08d5a1d271dacf08cc4"
+    root_url "https://github.com/canac/homebrew-tap/releases/download/kaw-0.1.9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "757d8d8b1f8add17634ea05f4d1f28344abd3ab89847b7b73f5b728246c9d2fa"
+    sha256 cellar: :any,                 x86_64_linux: "8c214b23910210d5fefea39174b1029c9bc1985f4eed37ab511509f69d0b2afe"
   end
 
   depends_on "rust" => :build
