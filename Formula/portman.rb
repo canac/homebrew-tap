@@ -1,8 +1,8 @@
 class Portman < Formula
   desc "Local port allocation manager"
   homepage "https://github.com/canac/portman"
-  url "https://github.com/canac/portman/archive/refs/tags/v0.6.6.tar.gz"
-  sha256 "3fef5a4ab01757a772898cc3533f28db20235cb4d60cc83552f8a51ac2ad19dc"
+  url "https://github.com/canac/portman/archive/refs/tags/v0.6.7.tar.gz"
+  sha256 "7bb4bd94ae3934030d5c4894946049cccc1a7513e2791f8dc3dc94eaa389c366"
   license "MIT"
 
   bottle do
