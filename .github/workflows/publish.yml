@@ -67,3 +67,11 @@ jobs:
         uses: Homebrew/actions/git-try-push@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
         with:
           branch: main
+
+      - name: Delete branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULL_REQUEST: ${{ inputs.pull_request || github.event.pull_request.number }}
+        run: |
+          branch="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PULL_REQUEST" --jq .head.ref)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$branch"
